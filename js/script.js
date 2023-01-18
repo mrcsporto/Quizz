@@ -10,7 +10,9 @@ const result_box = document.querySelector(".result_box");
 const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
-const timeCount = document.querySelector(".timer .timer_sec");
+const timeCount = document.querySelector(".timer_sec");
+const timerBox = document.querySelector(".timer");
+console.log(timerBox);
 
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
@@ -182,6 +184,11 @@ function startTimer(time){
             let addZero = timeCount.textContent; 
             timeCount.textContent = "0" + addZero; //add a 0 before time value
         }
+        if(time < 5){ //if timer is less than 5
+            // timeCount.classList.add(".timer_sec_final")
+            timeCount.classList.remove(".timer_sec")
+
+        }
         if(time < 0){ //if timer is less than 0
             clearInterval(counter); //clear counter
             timeText.textContent = "Time Off"; //change the time text to time off
@@ -207,9 +214,21 @@ function startTimerLine(time){
     function timer(){
         time += 1; //upgrading time value with 1
         time_line.style.width = time + "px"; //increasing width of time_line with px by time value
-        if(time > 549){ //if time value is greater than 549
-            clearInterval(counterLine); //clear counterLine
+        time_line.style.background = "#007bff";
+        timeCount.classList.remove("timer_sec_final");
+        timeCount.classList.add("timer_sec");
+       
+        if (time > 372 && time < 550) {
+            time_line.style.background = "red";
+            timeCount.classList.remove("timer_sec");
+            timeCount.classList.add("timer_sec_final");
         }
+        else if (time == 550){ //if time value is equal than 549
+            clearInterval(counterLine); //clear counterLine
+            time_line.style.background = "red";
+            timeCount.classList.remove("timer_sec");
+            timeCount.classList.add("timer_sec_final");
+        } 
     }
 }
 

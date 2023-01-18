@@ -227,6 +227,22 @@ body{
     user-select: none;
 }
 
+.timer_sec_final {
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    color: red;
+    background: #ffb3b3;
+    border: 1px solid red;
+    user-select: none;
+  }
+  
+ 
+
 .quiz_box header .time_line{
     position: absolute;
     bottom: 0px;
