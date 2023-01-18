@@ -70,7 +70,6 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.2);
     font-size: 16px;
     color: #666;
-
 }
 
 input#ldgp {
@@ -80,6 +79,7 @@ input#ldgp {
 
 p.text {
     text-align: justify;
+    padding: 0 1rem;
 }
 
 .terms {
