@@ -39,6 +39,23 @@ body{
     transform: translate(-50%, -50%) scale(1);
 }
 
+.radio {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    padding: 1rem 0;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-size: 16px;
+   
+}
+
+.radio label {
+    color: #666;
+}
+
 .start_btn button{
     font-size: 25px;
     font-weight: 500;
@@ -49,6 +66,13 @@ body{
     border-radius: 5px;
     background: #fff;
     cursor: pointer;
+}
+
+#profissional,
+#academico {
+    -ms-transform: scale(2); /* IE 9 */
+    -webkit-transform: scale(2); /* Chrome, Safari, Opera */
+    transform: scale(2);
 }
 
 .info_box{

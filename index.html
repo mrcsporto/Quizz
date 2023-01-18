@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Quiz App | CodingNepal</title>
+    <title>CTO QUIZ</title>
     <link rel="stylesheet" href="style.css">
     <!-- FontAweome CDN Link for Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -31,23 +31,30 @@
 
     <!-- Register Box -->
     <div class="register_box">
-        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-title"><span>Cadastro</span></div>
         <div class="info-list">
             <form action="" id="contactForm">  
                 <div class="inputBox">
-                    <input type="text" id="name" placeholder="Your name...." />
+                    <input type="text" id="name" placeholder="Seu nome" required />
                 </div>
     
                 <div class="inputBox">
-                    <input type="email" id="emailid" placeholder="Your Email....." />
+                    <input type="email" id="emailid" placeholder="Seu Email" required/>
                 </div>
     
                 <div class="inputBox">
-                    <input type="text" id="RegraValida" name="RegraValida" onkeydown="javascript: fMasc( this, mCPF );" placeholder="Digite o seu CPF" title="É preciso que seja incluído um CPF válido" >
+                    <input type="text" id="RegraValida" placeholder="Digite o seu CPF" title="É preciso que seja incluído um CPF válido" required>
                 </div>
-                
+
+                <div class="inputBox radio">
+                    <input type="radio" id="profissional" name="profissao" value="P" required>
+                    <label for="profissional">Profissional</label><br>
+                    <input type="radio" id="academico" name="profissao" value="A" required>
+                    <label for="academico">Acadêmico</label><br>  
+                </div>
+             
                 <div class="inputBox">
-                    <button type="submit" class="restart" onclick="ValidaCPF();">Submit</button>
+                    <button type="submit" class="restart">Submit</button>
                 </div>
             </form>
         </div>
