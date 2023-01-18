@@ -1,17 +1,19 @@
 <!-- Created By CodingNepal - www.codingnepalweb.com  -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTO QUIZ</title>
     <link rel="stylesheet" href="style.css">
     <!-- FontAweome CDN Link for Icons-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
+
 <body>
     <!-- start Quiz button -->
-    <div class="start_btn"><button>Start Quiz</button></div>
+    <div class="start_btn"><button>Iniciar Quiz</button></div>
 
     <!-- Info Box -->
     <div class="info_box">
@@ -33,28 +35,41 @@
     <div class="register_box">
         <div class="info-title"><span>Cadastro</span></div>
         <div class="info-list">
-            <form action="" id="contactForm">  
+            <form action="" id="contactForm">
                 <div class="inputBox">
-                    <input type="text" id="name" placeholder="Seu nome" required />
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required />
                 </div>
-    
+
                 <div class="inputBox">
-                    <input type="email" id="emailid" placeholder="Seu Email" required/>
+                    <input type="text" id="cpf" name="cpf" placeholder="Digite o seu CPF"
+                        title="É preciso que seja incluído um CPF válido" required>
                 </div>
-    
+
                 <div class="inputBox">
-                    <input type="text" id="RegraValida" placeholder="Digite o seu CPF" title="É preciso que seja incluído um CPF válido" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Seu telefone celular"
+                        pattern="[0-9]{2}-[0-9]{9}" required>
                 </div>
 
                 <div class="inputBox radio">
-                    <input type="radio" id="profissional" name="profissao" value="P" required>
+                    <input type="radio" id="profissional" name="profession" value="profissional" required>
                     <label for="profissional">Profissional</label><br>
-                    <input type="radio" id="academico" name="profissao" value="A" required>
-                    <label for="academico">Acadêmico</label><br>  
+                    <input type="radio" id="academico" name="profession" value="academico" required>
+                    <label for="academico">Acadêmico</label><br>
                 </div>
-             
+                <div class="inputBox lgpd">
+                    <p class="text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id harum quos omnis alias commodi quis
+                        iure illo. Repudiandae est quo qui expedita dignissimos, praesentium maiores velit doloribus
+                        autem libero temporibus?
+                    </p>
+                    <div class="terms">
+                        <input type="checkbox" id="ldgp" name="lgpd" required>
+                        <p>Concordar com os termos acima.</p> 
+                    </div>
+                </div>
+
                 <div class="inputBox">
-                    <button type="submit" class="restart">Submit</button>
+                    <button class="submitForm">Iniciar Quiz</button>
                 </div>
             </form>
         </div>
@@ -113,8 +128,9 @@
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
     <script src="js/script.js"></script>
 
-    <!-- Inside this JavaScript file I've inserted the cpf validation -->
-    <script src="js/cpf.js"></script>
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script src="js/quizUsers.js"></script>
 
 </body>
+
 </html>

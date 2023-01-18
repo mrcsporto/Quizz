@@ -4,8 +4,10 @@ const info_box = document.querySelector(".info_box");
 const register_box = document.querySelector(".register_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
 const continue_btn = info_box.querySelector(".buttons .restart");
-const continue_btn_2 = register_box.querySelector(".buttons .restart");
+const nav_buttons = register_box.querySelector(".buttons");
+const submitForm = register_box.querySelector(".submitForm");
 const quiz_box = document.querySelector(".quiz_box");
+// const continue_btn_2 = document.querySelector(".buttons .restart");
 const result_box = document.querySelector(".result_box");
 const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
@@ -14,30 +16,60 @@ const timeCount = document.querySelector(".timer_sec");
 const timerBox = document.querySelector(".timer");
 
 // if startQuiz button clicked
-start_btn.onclick = ()=>{
+start_btn.onclick = () => {
     info_box.classList.add("activeInfo"); //show info box
 }
 
 // if exitQuiz button clicked
-exit_btn.onclick = ()=>{
+exit_btn.onclick = () => {
     info_box.classList.remove("activeInfo"); //hide info box
 }
 
 // if continueQuiz button clicked
-continue_btn.onclick = ()=>{
+continue_btn.onclick = () => {
     info_box.classList.remove("activeInfo"); //hide info box
-    register_box.classList.add("activeInfo"); //show quiz box
+    register_box.classList.add("activeInfo"); //show register box
+    nav_buttons.style.display = "none";
 }
 
+// function checkform(form) {
+//     // get all the inputs within the submitted form
+//     var inputs = form.getElementsByTagName('input');
+//     for (var i = 0; i < inputs.length; i++) {
+//         // only validate the inputs that have the required attribute
+//         if(inputs[i].hasAttribute("required")){
+//             if(inputs[i].value == ""){
+//                 // found an empty field that is required
+//                 alert("Please fill all required fields");
+//                 console.log("Please fill all required fields");
+//                 return false;
+//             }
+//         }
+//     }
+//     return true;
+// }
+
+
+// submitForm.onclick = (e) => {
+//     e.preventDefault();
+//     register_box.classList.remove("activeInfo"); //hide info box
+//     quiz_box.classList.add("activeQuiz"); //show quiz box
+//     showQuetions(0); //calling showQestions function
+//     queCounter(1); //passing 1 parameter to queCounter
+//     startTimer(15); //calling startTimer function
+//     startTimerLine(0); //calling startTimerLine function
+// }
+
+
 // if continueQuiz button clicked
-continue_btn_2.onclick = ()=>{
-    register_box.classList.remove("activeInfo"); //hide info box
-    quiz_box.classList.add("activeQuiz"); //show quiz box
-    showQuetions(0); //calling showQestions function
-    queCounter(1); //passing 1 parameter to queCounter
-    startTimer(15); //calling startTimer function
-    startTimerLine(0); //calling startTimerLine function
-}
+// continue_btn_2.onclick = ()=>{
+//     register_box.classList.remove("activeInfo"); //hide info box
+//     restart_quiz.classList.remove("restart"); //
+//     showQuetions(0); //calling showQestions function
+//     queCounter(1); //passing 1 parameter to queCounter
+//     startTimer(15); //calling startTimer function
+//     startTimerLine(0); //calling startTimerLine function
+// }
 
 let timeValue =  15;
 let que_count = 0;
