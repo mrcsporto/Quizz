@@ -232,6 +232,7 @@ function queCounter(index) {
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
 
+// add user register to local storage
 let user = {}
 let userData = []
 let validForm = false
@@ -249,6 +250,7 @@ const handleUsersRegister = (user) => {
     }
 }
 
+// if quit button clicked
 quitButton.addEventListener("click", function () {
     user.score = JSON.stringify(finalScore)
     quitButton.innerHTML = "Enviando...";
@@ -257,11 +259,9 @@ quitButton.addEventListener("click", function () {
     quitButton.style.pointerEvents = "none";
 
     handleUsersRegister(user)
-  
-    setTimeout(() => {
 
+    setTimeout(() => {
         quitButton.innerHTML = "Enviado com sucesso";
-        // quitButton.insertAdjacentHTML("beforeend", tickIconTag);
         quitButton.style.background = 'green';
         quitButton.style.pointerEvents = "none";
         setTimeout(() => {
@@ -270,29 +270,33 @@ quitButton.addEventListener("click", function () {
     }, 1500);
 });
 
-// if quitQuiz button clicked
+// if submit button clicked
 const handleSubmit = (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
-    const formDataJSON = Object.fromEntries(formData);
-
-    user.name = formDataJSON.name
-    user.cpf = formDataJSON.cpf
-    user.phone = formDataJSON.phone
-    user.profession = formDataJSON.profession
-    user.lgpd = formDataJSON.lgpd
-    user.score = 0
-
-    console.log(user)
-    isEmpty(user)
+    if (ValidaCPF()) {
+        const formData = new FormData(event.target);
+        const formDataJSON = Object.fromEntries(formData);
+    
+        user.name = formDataJSON.name
+        user.cpf = formDataJSON.cpf
+        user.phone = formDataJSON.phone
+        user.profession = formDataJSON.profession
+        user.lgpd = formDataJSON.lgpd
+        user.score = 0
+    
+        console.log(user)
+        isEmpty(user)
+    } else {
+        alert("CPF inválido")
+    }
 }
 
+// check if form is empty
 const form = document.getElementById('contactForm')
 form.addEventListener('submit', handleSubmit)
 
 function isEmpty(user) {
     validForm = Object.keys(user).length > 0 ? true : false
-
     submitForm.innerHTML = "Processando cadastro...";
     submitForm.style.background = '#777';
     submitForm.style.border = '1px solid #777';
@@ -305,3 +309,64 @@ function isEmpty(user) {
         submitForm.style.pointerEvents = "all";
     }, 2000);
 }
+
+// validar cpf
+function ValidaCPF() {
+    let cpf = document.getElementById("cpf").value;
+    strCPF = cpf.replace(/[^a-zA-Z0-9]/g, '');
+    let Soma;
+    let Resto;
+    Soma = 0;
+    if (strCPF == "00000000000") return false;
+
+    for (i = 1; i <= 9; i++) Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i);
+    Resto = (Soma * 10) % 11;
+
+        if ((Resto == 10) || (Resto == 11)) Resto = 0;
+        if (Resto != parseInt(strCPF.substring(9, 10))) return false;
+
+    Soma = 0;
+        for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (12 - i);
+        Resto = (Soma * 10) % 11;
+
+        if ((Resto == 10) || (Resto == 11)) Resto = 0;
+        if (Resto != parseInt(strCPF.substring(10, 11))) return false;
+        return true;
+}
+
+// apply mask to cpf
+function fMasc(objeto, mascara) {
+    obj = objeto
+    masc = mascara
+    setTimeout("fMascEx()", 1)
+}
+
+function fMascEx() {
+    obj.value = masc(obj.value)
+}
+
+function mCPF(cpf) {
+    cpf = cpf.replace(/\D/g, "")
+    cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
+    cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
+    cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
+    return cpf
+}
+
+// Get the phone input element
+var phoneInput = document.getElementById("phone");
+
+// Add an event listener for the keyup event
+phoneInput.addEventListener("keyup", function() {
+  // Get the current value of the input
+  var phoneNumber = phoneInput.value;
+  
+  // Use a regular expression to format the phone number as (xxx) xxx-xxxx
+  phoneNumber = phoneNumber.replace(/\D/g, "")
+  phoneNumber = phoneNumber.replace(/(\d{2})(\d)/, "($1) $2");
+  phoneNumber = phoneNumber.replace(/(\d{5})(\d)/, "$1 - $2");
+  phoneNumber = phoneNumber.replace(/(\d{4})(\d)/, "$1$2");
+  
+  // Update the value of the input with the formatted phone number
+  phoneInput.value = phoneNumber;
+});
