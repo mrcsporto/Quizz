@@ -102,12 +102,19 @@ p.text {
     cursor: pointer;
 }
 
+button#submitButtonId {
+    display: flex;
+    justify-content: center;
+}
+
+.submitForm .icon.tick {
+    padding: 0 0 0 0.5rem;
+}
+
 #profissional,
 #academico {
     -ms-transform: scale(2);
-    /* IE 9 */
     -webkit-transform: scale(2);
-    /* Chrome, Safari, Opera */
     transform: scale(2);
 }
 
@@ -476,6 +483,8 @@ footer button.show {
     margin: 10px 0;
     font-size: 18px;
     font-weight: 500;
+    flex-direction: column;
+    align-items: center;
 }
 
 .result_box .score_text span p {
@@ -519,6 +528,16 @@ footer button.show {
 .buttons button.quit:hover {
     color: #fff;
     background: #007bff;
+}
+
+#quitButton {
+    color: #fff;
+    background: #007bff;
+}
+
+.quitButton:hover {
+    color: #007bff;
+    background: #fff;
 }
 
 .container form {

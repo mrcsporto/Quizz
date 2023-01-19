@@ -13,7 +13,9 @@
 
 <body>
     <!-- start Quiz button -->
-    <div class="start_btn"><button>Iniciar Quiz</button></div>
+    <div class="start_btn">
+        <button>Iniciar Quiz</button>
+    </div>
 
     <!-- Info Box -->
     <div class="info_box">
@@ -69,12 +71,12 @@
                 </div>
 
                 <div class="inputBox">
-                    <button class="submitForm">Iniciar Quiz</button>
+                    <button class="submitForm" id="submitButtonId">Aceitar</button>
                 </div>
             </form>
         </div>
         <div class="buttons">
-            <button class="quit">Exit Quiz</button>
+            <button class="quit">Sair do Quiz</button>
             <button class="restart">Continue</button>
         </div>
     </div>
@@ -103,7 +105,7 @@
             <div class="total_que">
                 <!-- Here I've inserted Question Count Number from JavaScript -->
             </div>
-            <button class="next_btn">Next Que</button>
+            <button class="next_btn">Próxima</button>
         </footer>
     </div>
 
@@ -118,7 +120,7 @@
         </div>
         <div class="buttons">
             <button class="restart">Replay Quiz</button>
-            <button class="quit">Quit Quiz</button>
+            <button class="quit" id="quitButton">Enviar Restultados</button>
         </div>
     </div>
 
@@ -129,7 +131,7 @@
     <script src="js/script.js"></script>
 
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
-    <script src="js/quizUsers.js"></script>
+    <!-- <script type="module" src="js/quizUsers.js"></script> -->
 
 </body>
 
