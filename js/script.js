@@ -233,20 +233,41 @@ function queCounter(index) {
 }
 
 let user = {}
+let userData = []
 let validForm = false
-const button = document.getElementById("quitButton");
+const quitButton = document.getElementById("quitButton");
 
-
-
-button.addEventListener("click", function () {
-    user.score = JSON.stringify(finalScore)
-    button.innerHTML = "Sair"
-  
-    // if quitQuiz button clicked
-    quit_quiz.onclick = () => {
-        window.location.reload(); //reload the current window
+const handleUsersRegister = (user) => {
+    if (localStorage.getItem("users")) {
+        let updateUserList = JSON.parse(localStorage.getItem("users"))
+        updateUserList.push(user)
+        localStorage.setItem("users", JSON.stringify(updateUserList));
+    } else {
+        userData.push(user)
+        localStorage.setItem("users", JSON.stringify(userData));
+        console.log(userData)
     }
-    console.log(user)
+}
+
+quitButton.addEventListener("click", function () {
+    user.score = JSON.stringify(finalScore)
+    quitButton.innerHTML = "Enviando...";
+    quitButton.style.background = '#777';
+    quitButton.style.border = '1px solid #777';
+    quitButton.style.pointerEvents = "none";
+
+    handleUsersRegister(user)
+  
+    setTimeout(() => {
+
+        quitButton.innerHTML = "Enviado com sucesso";
+        // quitButton.insertAdjacentHTML("beforeend", tickIconTag);
+        quitButton.style.background = 'green';
+        quitButton.style.pointerEvents = "none";
+        setTimeout(() => {
+            window.location.reload(); //reload the current window
+        }, 2000);
+    }, 1500);
 });
 
 // if quitQuiz button clicked
@@ -284,8 +305,3 @@ function isEmpty(user) {
         submitForm.style.pointerEvents = "all";
     }, 2000);
 }
-
-
-
-
-
