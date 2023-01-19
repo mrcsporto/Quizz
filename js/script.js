@@ -364,7 +364,7 @@ phoneInput.addEventListener("keyup", function() {
   // Use a regular expression to format the phone number as (xxx) xxx-xxxx
   phoneNumber = phoneNumber.replace(/\D/g, "")
   phoneNumber = phoneNumber.replace(/(\d{2})(\d)/, "($1) $2");
-  phoneNumber = phoneNumber.replace(/(\d{5})(\d)/, "$1 - $2");
+  phoneNumber = phoneNumber.replace(/(\d{5})(\d)/, "$1-$2");
   phoneNumber = phoneNumber.replace(/(\d{4})(\d)/, "$1$2");
   
   // Update the value of the input with the formatted phone number
