@@ -292,6 +292,7 @@ const handleSubmit = (event) => {
     }
 }
 
+// function to check if user already played
 function canPlayByCpf() {
     let userCpfs = []
     let checkPlayerCpf
@@ -324,7 +325,6 @@ function canPlayByCpf() {
 
 const form = document.getElementById('contactForm')
 form.addEventListener('submit', handleSubmit)
-
 // check if form is empty and validade if user already played by cpf
 function isEmpty(user) {
     validForm = Object.keys(user).length > 0 ? true : false
