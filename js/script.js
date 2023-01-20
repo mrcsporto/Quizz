@@ -292,34 +292,38 @@ const handleSubmit = (event) => {
     }
 }
 
+let userCpfs = []
 // function to check if user already played
 function canPlayByCpf() {
-    let userCpfs = []
     let checkPlayerCpf
-    const users = JSON.parse(localStorage.getItem("users"))
-    for (let i = 0; i < users.length; i++) {
-        userCpfs.push(users[i].cpf) // add all users
-        checkPlayerCpf = userCpfs.includes(user.cpf) // check if user already played
-        console.log(checkPlayerCpf)
-    }
-    if (checkPlayerCpf) {
-        submitForm.innerHTML = "Processando cadastro...";
-        submitForm.style.background = '#777';
-        submitForm.style.border = '1px solid #777';
-        submitForm.style.pointerEvents = "none";
-
-        setTimeout(() => {
-            submitForm.innerHTML = "O usuário já jogou";
-            submitForm.style.background = 'red';
-            submitForm.style.border = '1px solid red';
-            submitForm.style.pointerEvents = "none";
-        }, 1500)
-        setTimeout(() => {
-            window.location.reload()
-        }, 3000)
-        console.log("user already played")
-    } else {
+    if (localStorage.getItem("users") === null) {
         isEmpty(user)
+    } else {
+        const users = JSON.parse(localStorage.getItem("users"))
+        for (let i = 0; i < users.length; i++) {
+            userCpfs.push(users[i].cpf) // add all users
+            checkPlayerCpf = userCpfs.includes(user.cpf) // check if user already played
+            console.log(checkPlayerCpf)
+        }
+        if (checkPlayerCpf) {
+            submitForm.innerHTML = "Processando cadastro...";
+            submitForm.style.background = '#777';
+            submitForm.style.border = '1px solid #777';
+            submitForm.style.pointerEvents = "none";
+
+            setTimeout(() => {
+                submitForm.innerHTML = "O usuário já jogou";
+                submitForm.style.background = 'red';
+                submitForm.style.border = '1px solid red';
+                submitForm.style.pointerEvents = "none";
+            }, 1500)
+            setTimeout(() => {
+                window.location.reload()
+            }, 3000)
+            console.log("user already played")
+        } else {
+            isEmpty(user)
+        }
     }
 }
 
@@ -339,7 +343,6 @@ function isEmpty(user) {
         submitForm.style.background = 'green';
         submitForm.style.pointerEvents = "initial";
     }, 2000);
-
 }
 
 // validar cpf
