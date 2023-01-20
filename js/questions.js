@@ -55,7 +55,7 @@ let shuffledQuestion = questions
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value)
    
-shuffledQuestion.map(function(item) {
+shuffledQuestion = shuffledQuestion.map(function(item) {
   item.options.sort(function() {
       return 0.5 - Math.random();
   });
