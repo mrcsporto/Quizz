@@ -2,57 +2,35 @@
 let questions = [
     {
    
-    question: "What does HTML stand for?",
-    answer: "Hyper Text Markup Language",
+    question: "Qual o menor país do mundo?",
+    answer: "Vaticano",
     options: [
-      "Hyper Text Preprocessor",
-      "Hyper Text Markup Language",
-      "Hyper Text Multiple Language",
-      "Hyper Tool Multi Language"
+      "Vaticano",
+      "China",
+      "Mônaco",
+      "Malta",
     ]
   },
     {
    
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    question: "Quantas casas decimais tem o número pi?",
+    answer: "Infinitas",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
+      "Infinitas",
+      "Duas",
+      "Cem",
+      "Milhares",
     ]
   },
     {
     
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "Em qual local da Ásia o português é língua oficial?",
+    answer: "Macau",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
-    ]
-  },
-    {
-   
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
-    options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language"
-    ]
-  },
-    {
-
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
-    options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
+      "Macau",
+      "Timor Leste",
+      "Singapura",
+      "Brunei",
     ]
   },
   // you can uncomment the below codes and make duplicate as more as you want to add question

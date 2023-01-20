@@ -56,6 +56,13 @@ body {
     color: #666;
 }
 
+#profissional,
+#academico {
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
+
 .inputBox.lgpd {
     display: flex;
     height: 15rem;
@@ -77,12 +84,12 @@ input#ldgp {
     padding-left: 1rem;
 }
 
-p.text {
+.lgpd p.text {
     text-align: justify;
     padding: 0 1rem;
 }
 
-.terms {
+.lgpd .terms {
     display: inline-flex;
     width: 80%;
     justify-content: space-evenly;
@@ -111,15 +118,8 @@ button#submitButtonId {
     padding: 0 0 0 0.5rem;
 }
 
-#profissional,
-#academico {
-    -ms-transform: scale(2);
-    -webkit-transform: scale(2);
-    transform: scale(2);
-}
-
 .info_box {
-    width: 540px;
+    width: max-content;
     background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
@@ -615,4 +615,60 @@ footer button.show {
     font-size: 18px;
     font-weight: 900;
     display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .register_box {
+        width: 90%;
+        background: #fff;
+        border-radius: 5px;
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .lgpd p.text {
+        text-align: justify;
+        padding: 0 1rem;
+        color: #666;
+        font-size: 80%;
+    }
+
+    .lgpd .terms {
+        font-size: 70%;
+        display: inline-flex;
+        width: 80%;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+    }
+
+    input#ldgp {
+        transform: scale(1);
+        padding-left: 1rem;
+    }
+
+    #profissional,
+    #academico {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    .info_box {
+        width: 90%;
+    }
+
+    .info_box .info-list {
+        padding: 15px 15px;
+    }
+
+    .quiz_box {
+        width: 95%;
+    }
+
+    .result_box {
+        width: 95%;
+    }
 }

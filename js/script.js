@@ -157,19 +157,19 @@ function showResult() {
     result_box.classList.add("activeResult"); //show result box
     restart_quiz.style.display = "none";
     const scoreText = result_box.querySelector(".score_text");
-    if (finalScore > 2000) { // if user scored more than 3
+    if (finalScore > 2000) { // if user scored more than 2000
         //creating a new span tag and passing the user score number and total question number
-        let scoreTag = '<span><p>' + user.name + '</p> and congrats! 🎉, You got <p>' + finalScore + '</p></span>';
+        let scoreTag = '<span><p>' + user.name + '</p> Parabéns! 🎉 Você fez <p>' + finalScore + '</p></span>';
         crown.style.color = "gold"
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     }
-    else if (finalScore > 1000) { // if user scored more than 1
-        let scoreTag = '<span><p>' + user.name + '</p> and nice 😎, You got <p>' + finalScore + '</p></span>';
+    else if (finalScore > 1000) { // if user scored more than 1000
+        let scoreTag = '<span><p>' + user.name + '</p> Muito bom! 😎 Você fez <p>' + finalScore + '</p></span>';
         crown.style.color = "silver"
         scoreText.innerHTML = scoreTag;
     }
-    else { // if user scored less than 1
-        let scoreTag = '<span><p>' + user.name + '</p> and sorry 😐, You got only <p>' + finalScore + '</p></span>';
+    else { // if user scored less than 1000
+        let scoreTag = '<span><p>' + user.name + '</p> Continue Tentando! 😬 Você só fez <p>' + finalScore + '</p></span>';
         crown.style.color = "tan"
         scoreText.innerHTML = scoreTag;
     }
@@ -216,7 +216,7 @@ function startTimerLine(time) {
             timeCount.classList.remove("timer_sec");
             timeCount.classList.add("timer_sec_final");
         }
-        else if (time == 550) { //if time value is equal than 549
+        else if (time == 550) { //if time value is equal 550
             clearInterval(counterLine); //clear counterLine
             time_line.style.background = "red";
             timeCount.classList.remove("timer_sec");
