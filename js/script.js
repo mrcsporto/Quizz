@@ -286,26 +286,40 @@ const handleSubmit = (event) => {
         user.score = 0
 
         console.log(user)
-        isEmpty(user)
-        canPlayByCpf(cpf)
+        canPlayByCpf()
     } else {
         alert("CPF inválido")
     }
 }
 
-function canPlayByCpf(cpf) {
-    let userCpfId
+function canPlayByCpf() {
+    let userCpfs = []
+    let checkPlayerCpf
     const users = JSON.parse(localStorage.getItem("users"))
     for (let i = 0; i < users.length; i++) {
-        userCpfId = users[i].cpf;
+        userCpfs.push(users[i].cpf) // add all users
+        checkPlayerCpf = userCpfs.includes(user.cpf) // check if user already played
+        console.log(checkPlayerCpf)
     }
-    console.log("userCpfId", userCpfId)
-    if (userCpfId === user.cpf) {
+    if (checkPlayerCpf) {
+        submitForm.innerHTML = "Processando cadastro...";
+        submitForm.style.background = '#777';
+        submitForm.style.border = '1px solid #777';
+        submitForm.style.pointerEvents = "none";
+
+        setTimeout(() => {
+            submitForm.innerHTML = "O usuário já jogou";
+            submitForm.style.background = 'red';
+            submitForm.style.border = '1px solid red';
+            submitForm.style.pointerEvents = "none";
+        }, 1500)
+        setTimeout(() => {
+            window.location.reload()
+        }, 3000)
         console.log("user already played")
     } else {
-        console.log("user can play")
+        isEmpty(user)
     }
-
 }
 
 const form = document.getElementById('contactForm')
@@ -314,7 +328,6 @@ form.addEventListener('submit', handleSubmit)
 // check if form is empty and validade if user already played by cpf
 function isEmpty(user) {
     validForm = Object.keys(user).length > 0 ? true : false
-
     submitForm.innerHTML = "Processando cadastro...";
     submitForm.style.background = '#777';
     submitForm.style.border = '1px solid #777';
