@@ -9,7 +9,7 @@
 }
 
 body {
-    background: #007bff;
+    background: #fff;
 }
 
 ::selection {
@@ -98,14 +98,14 @@ input#ldgp {
 }
 
 .start_btn button {
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: 500;
-    color: #007bff;
-    padding: 15px 30px;
+    color: #fff;
+    background-color: #007bff;
+    padding: 1.5rem 3rem;
     outline: none;
     border: none;
     border-radius: 5px;
-    background: #fff;
     cursor: pointer;
 }
 
@@ -615,6 +615,31 @@ footer button.show {
     font-size: 18px;
     font-weight: 900;
     display: none;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: 5rem
+}
+
+.logos .apcd {
+    background-image: url(img/logos-apcd.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+}
+
+.logos .abcd {
+    background-image: url(img/logos-abcd.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
 }
 
 @media screen and (max-width: 768px) {

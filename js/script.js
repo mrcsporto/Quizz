@@ -102,6 +102,7 @@ next_btn.onclick = () => {
 
 // getting questions and options from array
 function showQuetions(index) {
+    submitForm.style.pointerEvents = "none";
     const que_text = document.querySelector(".que_text");
     let que_counter = parseInt(index, 10) + 1
     //creating a new span and div tag for question and option and passing the value using array index
@@ -169,7 +170,7 @@ function showResult() {
         scoreText.innerHTML = scoreTag;
     }
     else { // if user scored less than 1000
-        let scoreTag = '<span><p>' + user.name + '</p> Continue Tentando! 😬 Você só fez <p>' + finalScore + '</p></span>';
+        let scoreTag = '<span><p>' + user.name + '</p> Continue Tentando! 😬 Você fez <p>' + finalScore + '</p></span>';
         crown.style.color = "tan"
         scoreText.innerHTML = scoreTag;
     }
@@ -276,27 +277,44 @@ const handleSubmit = (event) => {
     if (ValidaCPF()) {
         const formData = new FormData(event.target);
         const formDataJSON = Object.fromEntries(formData);
-    
+
         user.name = formDataJSON.name
         user.cpf = formDataJSON.cpf
         user.phone = formDataJSON.phone
         user.profession = formDataJSON.profession
         user.lgpd = formDataJSON.lgpd
         user.score = 0
-    
+
         console.log(user)
         isEmpty(user)
+        canPlayByCpf(cpf)
     } else {
         alert("CPF inválido")
     }
 }
 
-// check if form is empty
+function canPlayByCpf(cpf) {
+    let userCpfId
+    const users = JSON.parse(localStorage.getItem("users"))
+    for (let i = 0; i < users.length; i++) {
+        userCpfId = users[i].cpf;
+    }
+    console.log("userCpfId", userCpfId)
+    if (userCpfId === user.cpf) {
+        console.log("user already played")
+    } else {
+        console.log("user can play")
+    }
+
+}
+
 const form = document.getElementById('contactForm')
 form.addEventListener('submit', handleSubmit)
 
+// check if form is empty and validade if user already played by cpf
 function isEmpty(user) {
     validForm = Object.keys(user).length > 0 ? true : false
+
     submitForm.innerHTML = "Processando cadastro...";
     submitForm.style.background = '#777';
     submitForm.style.border = '1px solid #777';
@@ -306,8 +324,9 @@ function isEmpty(user) {
         submitForm.innerHTML = "Iniciar o Quiz";
         submitForm.insertAdjacentHTML("beforeend", tickIconTag);
         submitForm.style.background = 'green';
-        submitForm.style.pointerEvents = "all";
+        submitForm.style.pointerEvents = "initial";
     }, 2000);
+
 }
 
 // validar cpf
@@ -322,16 +341,16 @@ function ValidaCPF() {
     for (i = 1; i <= 9; i++) Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i);
     Resto = (Soma * 10) % 11;
 
-        if ((Resto == 10) || (Resto == 11)) Resto = 0;
-        if (Resto != parseInt(strCPF.substring(9, 10))) return false;
+    if ((Resto == 10) || (Resto == 11)) Resto = 0;
+    if (Resto != parseInt(strCPF.substring(9, 10))) return false;
 
     Soma = 0;
-        for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (12 - i);
-        Resto = (Soma * 10) % 11;
+    for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (12 - i);
+    Resto = (Soma * 10) % 11;
 
-        if ((Resto == 10) || (Resto == 11)) Resto = 0;
-        if (Resto != parseInt(strCPF.substring(10, 11))) return false;
-        return true;
+    if ((Resto == 10) || (Resto == 11)) Resto = 0;
+    if (Resto != parseInt(strCPF.substring(10, 11))) return false;
+    return true;
 }
 
 // apply mask to cpf
@@ -354,19 +373,19 @@ function mCPF(cpf) {
 }
 
 // Get the phone input element
-var phoneInput = document.getElementById("phone");
+let phoneInput = document.getElementById("phone");
 
 // Add an event listener for the keyup event
-phoneInput.addEventListener("keyup", function() {
-  // Get the current value of the input
-  var phoneNumber = phoneInput.value;
-  
-  // Use a regular expression to format the phone number as (xxx) xxx-xxxx
-  phoneNumber = phoneNumber.replace(/\D/g, "")
-  phoneNumber = phoneNumber.replace(/(\d{2})(\d)/, "($1) $2");
-  phoneNumber = phoneNumber.replace(/(\d{5})(\d)/, "$1-$2");
-  phoneNumber = phoneNumber.replace(/(\d{4})(\d)/, "$1$2");
-  
-  // Update the value of the input with the formatted phone number
-  phoneInput.value = phoneNumber;
+phoneInput.addEventListener("keyup", function () {
+    // Get the current value of the input
+    let phoneNumber = phoneInput.value;
+
+    // Use a regular expression to format the phone number as (xxx) xxx-xxxx
+    phoneNumber = phoneNumber.replace(/\D/g, "")
+    phoneNumber = phoneNumber.replace(/(\d{2})(\d)/, "($1) $2");
+    phoneNumber = phoneNumber.replace(/(\d{5})(\d)/, "$1-$2");
+    phoneNumber = phoneNumber.replace(/(\d{4})(\d)/, "$1$2");
+
+    // Update the value of the input with the formatted phone number
+    phoneInput.value = phoneNumber;
 });
