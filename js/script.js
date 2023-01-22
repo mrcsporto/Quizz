@@ -79,6 +79,7 @@ restart_quiz.onclick = () => {
 
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
+const countDownNextQuestion = document.querySelector(".time_to_next_que");
 
 // if Next Que button clicked
 next_btn.onclick = () => {
@@ -93,11 +94,24 @@ next_btn.onclick = () => {
         startTimerLine(widthValue); //calling startTimerLine function
         timeText.textContent = "Tempo"; //change the timeText to Time Left
         next_btn.classList.remove("show"); //hide the next button
+        
     } else {
         clearInterval(counter); //clear counter
         clearInterval(counterLine); //clear counterLine
         showResult(); //calling showResult function
     }
+}
+
+function nextButtonCountdown() {
+let count = 5;
+const intervalId = setInterval(() => {
+    count--;
+    if (count === 0) {
+        clearInterval(intervalId);
+        next_btn.click();
+    }
+    countDownNextQuestion.innerHTML = count;
+}, 1000);
 }
 
 // getting questions and options from array
@@ -150,7 +164,8 @@ function optionSelected(answer) {
         option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
     }
     next_btn.classList.add("show");
-    startTimer(time) //show the next button if user selected any option
+    nextButtonCountdown();
+    // startTimer(time) //show the next button if user selected any option
 }
 
 function showResult() {
