@@ -73,7 +73,7 @@ restart_quiz.onclick = () => {
     clearInterval(counterLine); //clear counterLine
     startTimer(timeValue); //calling startTimer function
     startTimerLine(widthValue); //calling startTimerLine function
-    timeText.textContent = "Time Left"; //change the text of timeText to Time Left
+    timeText.textContent = "Tempo"; //change the text of timeText to Time Left
     next_btn.classList.remove("show"); //hide the next button
 }
 
@@ -91,7 +91,7 @@ next_btn.onclick = () => {
         clearInterval(counterLine); //clear counterLine
         startTimer(timeValue); //calling startTimer function
         startTimerLine(widthValue); //calling startTimerLine function
-        timeText.textContent = "Time Left"; //change the timeText to Time Left
+        timeText.textContent = "Tempo"; //change the timeText to Time Left
         next_btn.classList.remove("show"); //hide the next button
     } else {
         clearInterval(counter); //clear counter
@@ -149,7 +149,8 @@ function optionSelected(answer) {
     for (i = 0; i < allOptions; i++) {
         option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
     }
-    next_btn.classList.add("show"); //show the next button if user selected any option
+    next_btn.classList.add("show");
+    startTimer(time) //show the next button if user selected any option
 }
 
 function showResult() {
@@ -158,22 +159,8 @@ function showResult() {
     result_box.classList.add("activeResult"); //show result box
     restart_quiz.style.display = "none";
     const scoreText = result_box.querySelector(".score_text");
-    if (finalScore > 2000) { // if user scored more than 2000
-        //creating a new span tag and passing the user score number and total question number
-        let scoreTag = '<span><p>' + user.name + '</p> Parabéns! 🎉 Você fez <p>' + finalScore + '</p></span>';
-        crown.style.color = "gold"
-        scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
-    }
-    else if (finalScore > 1000) { // if user scored more than 1000
-        let scoreTag = '<span><p>' + user.name + '</p> Muito bom! 😎 Você fez <p>' + finalScore + '</p></span>';
-        crown.style.color = "silver"
-        scoreText.innerHTML = scoreTag;
-    }
-    else { // if user scored less than 1000
-        let scoreTag = '<span><p>' + user.name + '</p> Continue Tentando! 😬 Você fez <p>' + finalScore + '</p></span>';
-        crown.style.color = "tan"
-        scoreText.innerHTML = scoreTag;
-    }
+    let scoreTag = '<span> Obrigado pela sua participação <p class="name">' + user.name + '</p> Você fez <p class="score">' + finalScore + ' Pontos</p></span>';
+    scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
 }
 
 function startTimer(time) {
@@ -192,7 +179,7 @@ function startTimer(time) {
         }
         if (time < 0) { //if timer is less than 0
             clearInterval(counter); //clear counter
-            timeText.textContent = "Time Off"; //change the time text to time off
+            timeText.textContent = "Acabou"; //change the time text to time off
             const allOptions = option_list.children.length; //getting all option items
             for (i = 0; i < allOptions; i++) {
                 option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options

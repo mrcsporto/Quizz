@@ -304,7 +304,7 @@ button#submitButtonId {
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 145px;
 }
 
@@ -510,6 +510,7 @@ footer button.show {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 /* .result_box .icon {
@@ -536,6 +537,7 @@ footer button.show {
 .result_box .score_text span p {
     padding: 0 4px;
     font-weight: 600;
+    color: #0263ca;
 }
 
 .result_box .buttons {
