@@ -281,7 +281,7 @@ button#submitButtonId {
     position: relative;
     z-index: 2;
     /* height: 70px; */
-    padding: 0 30px;
+    padding: 10px 30px;
     background: #fff;
     border-radius: 5px 5px 0 0;
     display: flex;
@@ -305,7 +305,7 @@ button#submitButtonId {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 200px;
+    width: 145px;
 }
 
 .quiz_box header .timer .time_left_txt {
@@ -331,7 +331,7 @@ button#submitButtonId {
 header .logos {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     width: 100%;
 }
 
@@ -406,15 +406,15 @@ section .option_list .option:hover {
 }
 
 section .option_list .option.correct {
-    color: #155724;
-    background: #d4edda;
-    border: 1px solid #c3e6cb;
+    color: #004085;
+    background: lightskyblue;
+    border: 1px solid lightskyblue;
 }
 
 section .option_list .option.incorrect {
-    color: #721c24;
-    background: #f8d7da;
-    border: 1px solid #f5c6cb;
+    color: #004085;
+    background: lightskyblue;
+    border: 1px solid lightskyblue;
 }
 
 section .option_list .option.disabled {
@@ -526,10 +526,11 @@ footer button.show {
 .result_box .score_text span {
     display: flex;
     margin: 10px 0;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 500;
     flex-direction: column;
     align-items: center;
+
 }
 
 .result_box .score_text span p {

@@ -138,12 +138,12 @@ function optionSelected(answer) {
         userScore += 500 //upgrading score value with 1
         finalScore = parseInt(userScore + (divWidth - 550) * -1)
         answer.classList.add("correct"); //adding green color to correct selected option
-        answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
+        // answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
         console.log("Correct Answer");
         console.log("Your correct answers = " + parseInt(userScore + (divWidth - 550) * -1))
     } else {
         answer.classList.add("incorrect"); //adding red color to correct selected option
-        answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
+        // answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
         console.log("Wrong Answer");
     }
     for (i = 0; i < allOptions; i++) {
