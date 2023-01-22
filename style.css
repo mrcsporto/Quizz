@@ -17,7 +17,18 @@ body {
     background: #007bff;
 }
 
-.start_btn,
+.start_btn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .info_box,
 .register_box,
 .quiz_box,
@@ -69,7 +80,15 @@ body {
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: space-around;
+    align-content: space-between;
+}
+
+.buttons .terms {
+    display: inline-flex;
+    width: 55%;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
 }
 
 .lgpd {
@@ -138,16 +157,28 @@ button#submitButtonId {
     transition: all 0.3s ease;
 }
 
-.info_box .info-title {
-    height: 60px;
+.info-title .logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     width: 100%;
+}
+
+.info_box .info-title {
+    /* height: 60px; */
+    /* width: 100%; */
     border-bottom: 1px solid lightgrey;
     display: flex;
     align-items: center;
-    padding: 0 30px;
+    padding: 15px 30px 0;
     border-radius: 5px 5px 0 0;
     font-size: 20px;
     font-weight: 600;
+}
+
+.info-title span {
+    width: -webkit-fill-available;
+    font-size: 24px;
 }
 
 .info_box .info-list {
@@ -168,7 +199,7 @@ button#submitButtonId {
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     padding: 0 30px;
     border-top: 1px solid lightgrey;
 }
@@ -188,12 +219,12 @@ button#submitButtonId {
 }
 
 .register_box .info-title {
-    height: 60px;
+    /* height: 60px; */
     width: 100%;
     border-bottom: 1px solid lightgrey;
     display: flex;
     align-items: center;
-    padding: 0 30px;
+    padding: 15px 30px;
     border-radius: 5px 5px 0 0;
     font-size: 20px;
     font-weight: 600;
@@ -249,7 +280,7 @@ button#submitButtonId {
 .quiz_box header {
     position: relative;
     z-index: 2;
-    height: 70px;
+    /* height: 70px; */
     padding: 0 30px;
     background: #fff;
     border-radius: 5px 5px 0 0;
@@ -274,7 +305,7 @@ button#submitButtonId {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 145px;
+    width: 200px;
 }
 
 .quiz_box header .timer .time_left_txt {
@@ -295,6 +326,20 @@ button#submitButtonId {
     background: #343a40;
     border: 1px solid #343a40;
     user-select: none;
+}
+
+header .logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+header .title {
+    font-size: 24px;
+    font-weight: 600;
+    height: max-content;
+    padding: 15px 0;
 }
 
 .timer_sec_final {
@@ -467,11 +512,11 @@ footer button.show {
     transition: all 0.3s ease;
 }
 
-.result_box .icon {
+/* .result_box .icon {
     font-size: 100px;
     color: #007bff;
     margin-bottom: 10px;
-}
+} */
 
 .result_box .complete_text {
     font-size: 20px;
@@ -481,7 +526,7 @@ footer button.show {
 .result_box .score_text span {
     display: flex;
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 32px;
     font-weight: 500;
     flex-direction: column;
     align-items: center;
@@ -622,24 +667,24 @@ footer button.show {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    position: relative;
-    top: 5rem
+    /* position: relative;
+    top: 5rem */
 }
 
 .logos .apcd {
     background-image: url(img/logos-apcd.png);
     background-repeat: no-repeat;
     background-size: contain;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
 }
 
 .logos .abcd {
     background-image: url(img/logos-abcd.png);
     background-repeat: no-repeat;
     background-size: contain;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
 }
 
 @media screen and (max-width: 768px) {

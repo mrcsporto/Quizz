@@ -11,20 +11,28 @@
 </head>
 
 <body>
-    <div class="logos">
-        <a href="/ranking.html">
-            <div class="apcd"></div>
-        </a>
-        <div class="abcd"></div>
-    </div>
+
     <!-- start Quiz button -->
     <div class="start_btn">
+        <div class="logos">
+            <a href="/ranking.html">
+                <div class="apcd"></div>
+            </a>
+            <div class="abcd"></div>
+        </div>
         <button>Iniciar Quiz</button>
     </div>
 
     <!-- Info Box -->
     <div class="info_box">
-        <div class="info-title"><span>Regras do Quiz</span></div>
+        <div class="info-title"><span>Regras do Quiz</span>
+            <div class="logos">
+                <a href="/ranking.html">
+                    <div class="apcd"></div>
+                </a>
+                <div class="abcd"></div>
+            </div>
+        </div>
         <div class="info-list">
             <div class="info">1. Você tem <span>15 segundos</span> para responder a cada questão.</div>
             <div class="info">2. Não é possível selecionar uma resposta após o tempo acabar.</div>
@@ -35,14 +43,25 @@
             <div class="info">6. Quem responder mais rápido ganha mais pontos</div>
         </div>
         <div class="buttons">
+            <form class="terms">
+                <input type="checkbox" id="ldgp" name="lgpd" required>
+                <p>Concordar com as regras acima.</p>
+            </form>
             <button class="quit">Sair</button>
-            <button class="restart">Continuar</button>
+            <button class="restart">Aceitar</button>
         </div>
     </div>
 
     <!-- Register Box -->
     <div class="register_box">
-        <div class="info-title"><span>Cadastro</span></div>
+        <div class="info-title"><span>Cadastro</span>
+            <div class="logos">
+                <a href="/ranking.html">
+                    <div class="apcd"></div>
+                </a>
+                <div class="abcd"></div>
+            </div>
+        </div>
         <div class="info-list">
             <form action="" id="contactForm">
                 <div class="inputBox">
@@ -92,6 +111,14 @@
     <div class="quiz_box">
         <header>
             <div class="title">Perguntas</div>
+        </header>
+        <header>
+            <div class="logos">
+                <a href="/ranking.html">
+                    <div class="apcd"></div>
+                </a>
+                <div class="abcd"></div>
+            </div>
             <div class="timer">
                 <div class="time_left_txt">Tempo</div>
                 <div class="timer_sec">15</div>
@@ -121,7 +148,14 @@
         <div class="icon">
             <i class="fas fa-crown"></i>
         </div>
-        <div class="complete_text">Você concluiu o Quiz!</div>
+        <div class="complete_text">
+            <div class="logos">
+                <a href="/ranking.html">
+                    <div class="apcd"></div>
+                </a>
+                <div class="abcd"></div>
+            </div>
+        </div>
         <div class="score_text">
             <!-- Here I've inserted Score Result from JavaScript -->
         </div>
