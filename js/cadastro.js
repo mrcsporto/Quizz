@@ -11,7 +11,7 @@ function createTableRow(data) {
 
 function createTable() {
   const tableRows = users.map((value, i) => {
-    return createTableRow([users[i].name, users[i].profession, users[i].score]);
+    return createTableRow([users[i].name, users[i].cpf, users[i].phone, users[i].profession, users[i].score]);
   });
 
   return `
@@ -19,6 +19,8 @@ function createTable() {
         <thead>
           <tr>
             <td>Nome</td>
+            <td>CPF</td>
+            <td>Telefone</td>
             <td>Ocupação</td>
             <td>Pontos</td>
           </tr>
@@ -29,3 +31,9 @@ function createTable() {
       </table>
     `;
 }
+
+
+
+
+
+

@@ -2,39 +2,37 @@
 let questions = [
     {
    
-    question: "Qual o menor país do mundo?",
-    answer: "Vaticano",
+    question: "Qual seguro, ofertado de forma gratuita pela APCD/ABCD aos seus associados, visa indenizar o paciente em razão de um ato praticado pelo(a) cirurgião(ã)-dentista?",
+    answer: "Seguro de Responsabilidade Civil",
     options: [
-      "Vaticano",
-      "China",
-      "Mônaco",
-      "Malta",
+      "Seguro de Perda de Renda",
+      "Seguro de Responsabilidade Civil",
+      "Seguro de Consultório",
+      "Seguro de Vida",
     ]
   },
     {
    
-    question: "Quantas casas decimais tem o número pi?",
-    answer: "Infinitas",
+    question: "Qual benefício gratuito o(a) herdeiro(a) do(a) associado(a) da APCD/ABCD possui em caso de falecimento do(a) associado(a)?",
+    answer: "Pecúlio por Morte",
     options: [
-      "Infinitas",
-      "Duas",
-      "Cem",
-      "Milhares",
+      "Pensão por Morte",
+      "Pecúlio por Morte",
+      "Auxílio-Doença",
+      "Auxílio-Acidente",
     ]
   },
     {
     
-    question: "Em qual local da Ásia o português é língua oficial?",
-    answer: "Macau",
+    question: "A APCD criou um FAQ com conteúdos de orientação aos profissionais da odontologia. Ele é exclusivo para os associados da APCD/ABCD. Para ter acesso é preciso:",
+    answer: "Acessar o portal do associado da APCD",
     options: [
-      "Macau",
-      "Timor Leste",
-      "Singapura",
-      "Brunei",
+      "Acessar o portal do associado da APCD",
+      "Acessar o site do CFO",
+      "Acessar o site da FAOA",
+      "Nenhuma alternativa correta",
     ]
   },
-  // you can uncomment the below codes and make duplicate as more as you want to add question
-  // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
 
   //   {
   //   numb: 6,

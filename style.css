@@ -114,7 +114,7 @@ input#terms {
 
 .lgpd div.text {
     text-align: justify;
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
     font-size: 0.75rem;
     overflow: scroll;
     height: 12rem;
