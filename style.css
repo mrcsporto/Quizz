@@ -29,6 +29,26 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.start_btn .logos .apcd,
+.start_btn .logos .abcd {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 250px;
+    width: 250px;
+}
+
+.start_btn button {
+    font-size: 5rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #007bff;
+    padding: 1.5rem 3rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .info_box,
 .register_box,
 .quiz_box,
@@ -37,8 +57,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .info_box.activeInfo,
@@ -54,11 +74,11 @@ body {
 .radio {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     appearance: none;
     -webkit-appearance: none;
     border-radius: 50%;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     border: 1px solid rgba(0, 0, 0, 0.2);
     font-size: 16px;
 }
@@ -69,9 +89,13 @@ body {
 
 #profissional,
 #academico {
-    -ms-transform: scale(2);
-    -webkit-transform: scale(2);
-    transform: scale(2);
+    -ms-transform: scale(2.5);
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5)
+}
+
+.inputBox label {
+    padding: 0 2rem;
 }
 
 .inputBox.lgpd {
@@ -104,7 +128,7 @@ input#lgpd {
 }
 
 input#terms {
-    transform: scale(2);
+    transform: scale(2.5);
     padding-left: 2rem;
 }
 
@@ -133,18 +157,6 @@ input#terms {
     align-items: center;
 }
 
-.start_btn button {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #fff;
-    background-color: #007bff;
-    padding: 1.5rem 3rem;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 button#submitButtonId {
     display: flex;
     justify-content: center;
@@ -155,7 +167,9 @@ button#submitButtonId {
 }
 
 .info_box {
-    width: max-content;
+    width: 35vw;
+    height: 100vh;
+    padding: 5rem 0;
     background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
@@ -165,7 +179,8 @@ button#submitButtonId {
 }
 
 .register_box {
-    width: 540px;
+    width: 60vw;
+    height: 95vh;
     background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
@@ -179,6 +194,17 @@ button#submitButtonId {
     align-items: center;
     justify-content: flex-end;
     width: 100%;
+}
+
+.register_box .logos {
+    display: flex;
+    z-index: -9999;
+    width: 72vw;
+    position: absolute;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-end;
 }
 
 .info_box .info-title {
@@ -213,7 +239,7 @@ button#submitButtonId {
 }
 
 .info_box .buttons {
-    height: 60px;
+    height: 8rem;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -223,8 +249,8 @@ button#submitButtonId {
 
 .info_box .buttons button {
     margin: 0 5px;
-    height: 40px;
-    width: 100px;
+    height: 4rem;
+    width: 8rem;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
@@ -238,18 +264,18 @@ button#submitButtonId {
 .register_box .info-title {
     /* height: 60px; */
     width: 100%;
-    border-bottom: 1px solid lightgrey;
+    /* border-bottom: 1px solid lightgrey; */
     display: flex;
     align-items: center;
-    padding: 15px 30px;
+    /* padding: 15px 30px; */
     border-radius: 5px 5px 0 0;
     font-size: 20px;
     font-weight: 600;
 }
 
-.register_box .info-list {
+/* .register_box .info-list {
     padding: 15px 30px;
-}
+} */
 
 .register_box .info-list .info {
     margin: 5px 0;
@@ -285,7 +311,8 @@ button#submitButtonId {
 }
 
 .quiz_box {
-    width: 550px;
+    width: 60vw;
+    height: 95vh;
     background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
@@ -298,13 +325,13 @@ button#submitButtonId {
     position: relative;
     z-index: 2;
     /* height: 70px; */
-    padding: 10px 30px;
+    padding: 10px 0;
     background: #fff;
     border-radius: 5px 5px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1); */
 }
 
 .quiz_box header .title {
@@ -332,7 +359,7 @@ button#submitButtonId {
 }
 
 .quiz_box header .timer .timer_sec {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 500;
     height: 30px;
     width: 45px;
@@ -356,7 +383,7 @@ header .title {
     font-size: 24px;
     font-weight: 600;
     height: max-content;
-    padding: 15px 0;
+    /* padding: 15px 0; */
 }
 
 .timer_sec_final {
@@ -384,7 +411,7 @@ header .title {
 }
 
 section {
-    padding: 25px 30px 20px 30px;
+    padding: 25px 0;
     background: #fff;
 }
 
@@ -474,6 +501,7 @@ footer {
 footer .total_que span {
     display: flex;
     user-select: none;
+    font-size: 2rem;
 }
 
 footer .total_que span p {
@@ -486,9 +514,8 @@ footer .total_que span p:first-child {
 }
 
 footer button {
-    height: 40px;
-    padding: 0 13px;
-    font-size: 18px;
+    padding: 1rem 1rem;
+    font-size: 2rem;
     font-weight: 400;
     cursor: pointer;
     border: none;
@@ -519,7 +546,8 @@ footer button.show {
     border-radius: 5px;
     display: flex;
     padding: 25px 30px;
-    width: 450px;
+    width: 60vw;
+    height: 95vh;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -564,9 +592,9 @@ footer button.show {
 
 .result_box .buttons button {
     margin: 0 10px;
-    height: 45px;
-    padding: 0 20px;
-    font-size: 18px;
+    /* height: 45px; */
+    padding: 15px 20px;
+    font-size: 3rem;
     font-weight: 500;
     cursor: pointer;
     border: none;
@@ -684,6 +712,16 @@ footer button.show {
     display: none;
 }
 
+.quiz_box .logos {
+    display: flex;
+    z-index: -9999;
+    width: 72vw;
+    position: absolute;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-end;
+}
 .logos {
     display: flex;
     justify-content: space-evenly;
@@ -693,20 +731,20 @@ footer button.show {
     top: 5rem */
 }
 
-.logos .apcd {
-    background-image: url(img/logos-apcd.png);
+.logos .apcd,
+.logos .abcd {
     background-repeat: no-repeat;
     background-size: contain;
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
+}
+
+.logos .apcd {
+    background-image: url(img/logos-apcd.png);
 }
 
 .logos .abcd {
     background-image: url(img/logos-abcd.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 100px;
-    width: 100px;
 }
 
 /* 
