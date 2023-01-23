@@ -63,11 +63,11 @@ function exportTableToCsv() {
   downloadLink.style.display = "none";
   document.body.appendChild(downloadLink);
   downloadLink.click();
-  setInterval(function(){ 
-    downloadLink.click();
-  
-    // Append the data to an excel file 
-}, 9000000);
+
+  // setInterval(function () {
+  //   downloadLink.click();
+  // }, 9000000);
+
 }
 
 
