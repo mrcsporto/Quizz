@@ -700,7 +700,7 @@ footer button.show {
     height: 100px;
     width: 100px;
 }
-
+/* 
 @media screen and (max-width: 768px) {
     .register_box {
         width: 90%;
@@ -760,4 +760,4 @@ footer button.show {
     .result_box {
         width: 95%;
     }
-}
+} */
