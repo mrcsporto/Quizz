@@ -376,7 +376,7 @@ header .title {
 }
 
 .timer_sec_final {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 500;
     height: 30px;
     width: 45px;
@@ -519,6 +519,42 @@ footer button {
     pointer-events: none;
     transform: scale(0.95);
     transition: all 0.3s ease;
+}
+
+footer .next_btn {
+    margin-top: 2.25rem;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    cursor: none;
+    color: #004085;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+    outline: none;
+    border-radius: 5px;
+    line-height: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+
+button .time_to_next_que {
+    display: inline-flex;
+    font-size: 32px;
+    font-weight: 500;
+    height: 45px;
+    width: 60px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: #343a40;
+    border: 1px solid #343a40;
+    user-select: none;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 footer button:hover {

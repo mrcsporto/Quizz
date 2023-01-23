@@ -169,6 +169,10 @@ function optionSelected(answer) {
         let divWidth = document.getElementsByClassName("time_line")[0].offsetWidth;
         userScore += 500 //upgrading score value with 1
         finalScore = parseInt(userScore + (1152 - divWidth));
+        console.log(userScore)
+        console.log(divWidth)
+        console.log(1152 - divWidth)
+        console.log(finalScore)
         answer.classList.add("correct"); //adding green color to correct selected option
         // answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
         console.log("Correct Answer");
@@ -224,7 +228,7 @@ function startTimer(time) {
 }
 
 function startTimerLine(time) {
-    counterLine = setInterval(timer, 14);
+    counterLine = setInterval(timer,14);
     function timer() {
         time += 1; //upgrading time value with 1
         time_line.style.width = time + "px"; //increasing width of time_line with px by time value
@@ -233,7 +237,7 @@ function startTimerLine(time) {
         timeCount.classList.add("timer_sec");
         timeText.style.color = "#004085"
 
-        if (time > 805 && time < 1152) {
+        if (time > 815 && time < 1152) {
             time_line.style.background = "red";
             timeCount.classList.remove("timer_sec");
             timeCount.classList.add("timer_sec_final");
