@@ -18,7 +18,6 @@ function createTable() {
         <thead>
           <tr>
             <td>Nome</td>
-            <td>Ocupação</td>
             <td>Pontos</td>
           </tr>
         </thead>
