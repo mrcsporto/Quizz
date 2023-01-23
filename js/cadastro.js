@@ -33,6 +33,42 @@ function createTable() {
 
 
 
+function exportTableToCsv() {
+  var table = document.getElementById("table");
+  var csv = [];
+  var rows = table.rows;
+  for (var i = 0; i < rows.length; i++) {
+    var row = [], cols = rows[i].cells;
+    for (var j = 0; j < cols.length; j++) {
+      row.push(cols[j].innerText);
+    }
+    csv.push(row.join(","));
+  }
+
+  var currentDate = new Date();
+  var year = currentDate.getFullYear();
+  var month = currentDate.getMonth() + 1;
+  var day = currentDate.getDate();
+  var hour = currentDate.getHours();
+  var minute = currentDate.getMinutes();
+  var second = currentDate.getSeconds();
+  var fileName = "table-" + year + "-" + month + "-" + day + "-" + hour + "-" + minute + "-" + second + ".csv";
+
+  var csvFile;
+  var downloadLink;
+  csvFile = new Blob([csv.join("\n")], { type: "text/csv" });
+  downloadLink = document.createElement("a");
+  downloadLink.download = fileName;;
+  downloadLink.href = window.URL.createObjectURL(csvFile);
+  downloadLink.style.display = "none";
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  setInterval(function(){ 
+    downloadLink.click();
+  
+    // Append the data to an excel file 
+}, 9000000);
+}
 
 
 

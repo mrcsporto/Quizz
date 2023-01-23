@@ -10,6 +10,7 @@
 <body>
   <button><a href="index.html">Voltar p/ Quiz</a></button> 
   <button><a href="/Quizz/ranking.html">Ranking</a></button> 
+  <button onclick="exportTableToCsv()">Exportar Tabela</button>
   <br>
   <table class="customTable" id="table">
   </table>
@@ -17,5 +18,7 @@
 
  <!-- Inside this JavaScript file I've coded the ranking table -->
  <script src="js/cadastro.js"></script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.core.min.js"></script>
 
 </html>
