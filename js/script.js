@@ -3,9 +3,11 @@ const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
 const register_box = document.querySelector(".register_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
-const continue_btn = info_box.querySelector(".buttons .restart");
+const continue_btn = info_box.querySelector(".buttons .continue");
 const nav_buttons = register_box.querySelector(".buttons");
 const submitForm = register_box.querySelector(".submitForm");
+const submitTerms = info_box.querySelector("#submitTerms");
+const acceptTerms = info_box.querySelector("#terms");
 const quiz_box = document.querySelector(".quiz_box");
 const result_box = document.querySelector(".result_box");
 const option_list = document.querySelector(".option_list");
@@ -21,16 +23,17 @@ start_btn.onclick = () => {
 }
 
 // if exitQuiz button clicked
-exit_btn.onclick = () => {
+exit_btn.onclick = (e) => {
+    e.preventDefault();
     info_box.classList.remove("activeInfo"); //hide info box
 }
 
 // if continueQuiz button clicked
-continue_btn.onclick = () => {
-    info_box.classList.remove("activeInfo"); //hide info box
-    register_box.classList.add("activeInfo"); //show register box
-    nav_buttons.style.display = "none";
-}
+// continue_btn.onclick = () => {
+//     info_box.classList.remove("activeInfo"); //hide info box
+//     register_box.classList.add("activeInfo"); //show register box
+//     nav_buttons.style.display = "none";
+// }
 
 submitForm.onclick = () => {
     if (validForm) {
@@ -43,6 +46,18 @@ submitForm.onclick = () => {
     }
     else {
         console.log("Please fill all required fields");
+    }
+}
+
+submitTerms.onclick = (e) => {
+    if (acceptTerms.checked) {
+        e.preventDefault();
+        info_box.classList.remove("activeInfo"); //hide info box
+        register_box.classList.add("activeInfo"); //show register box
+        nav_buttons.style.display = "none";
+    }
+    else {
+        console.log("Por favor, aceite as condições de participação para continuar.");
     }
 }
 
@@ -94,7 +109,7 @@ next_btn.onclick = () => {
         startTimerLine(widthValue); //calling startTimerLine function
         timeText.textContent = "Tempo"; //change the timeText to Time Left
         next_btn.classList.remove("show"); //hide the next button
-        
+
     } else {
         clearInterval(counter); //clear counter
         clearInterval(counterLine); //clear counterLine
@@ -103,15 +118,18 @@ next_btn.onclick = () => {
 }
 
 function nextButtonCountdown() {
-let count = 5;
-const intervalId = setInterval(() => {
-    count--;
-    if (count === 0) {
-        clearInterval(intervalId);
-        next_btn.click();
-    }
-    countDownNextQuestion.innerHTML = count;
-}, 1000);
+    next_btn.style.pointerEvents = "none";
+    let count = 3;
+    const intervalId = setInterval(() => {
+        count--;
+        if (count === 0) {
+            clearInterval(intervalId);
+            console.log(count)
+            next_btn.click();
+            count = 3;
+        }
+        countDownNextQuestion.innerHTML = count;
+    }, 1000);
 }
 
 // getting questions and options from array

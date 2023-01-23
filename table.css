@@ -24,6 +24,5 @@ table.customTable thead {
 }
 
 a {
-  color: #7ea8f8;
-  font-size: 2rem;
+  text-decoration: none;
 }

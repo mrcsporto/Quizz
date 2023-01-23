@@ -85,7 +85,7 @@ body {
 
 .buttons .terms {
     display: inline-flex;
-    width: 55%;
+    /* width: 55%; */
     justify-content: space-evenly;
     align-content: center;
     align-items: center;
@@ -98,9 +98,18 @@ body {
     color: #666;
 }
 
-input#ldgp {
+input#lgpd {
     transform: scale(2);
     padding-left: 1rem;
+}
+
+input#terms {
+    transform: scale(2);
+    padding-left: 2rem;
+}
+
+.terms p {
+    padding: 0 1rem;
 }
 
 .lgpd p.text {
@@ -559,12 +568,14 @@ footer button.show {
     transition: all 0.3s ease;
 }
 
-.buttons button.restart {
+.buttons button.restart,
+.buttons button.continue {
     color: #fff;
     background: #007bff;
 }
 
-.buttons button.restart:hover {
+.buttons button.restart:hover,
+.buttons button.continue:hover {
     background: #0263ca;
 }
 
@@ -717,7 +728,12 @@ footer button.show {
         align-items: center;
     }
 
-    input#ldgp {
+    input#lgpd {
+        transform: scale(1);
+        padding-left: 1rem;
+    }
+
+    input#terms {
         transform: scale(1);
         padding-left: 1rem;
     }
