@@ -1,8 +1,16 @@
 const lgpdTerms = document.querySelector('.lgpd .text');
 
-let lgpdTermsText = `<p>Regulamento
+let lgpdTermsText = `<p>O concurso cultural “Quis APCD/ABCD” será organizado pela Associação Paulista de Cirurgiões-Dentistas Central e patrocinado pelas empresas:
 
-O concurso cultural “Quis APCD/ABCD” será organizado pela Associação Paulista de Cirurgiões-Dentistas Central e patrocinado pelas empresas xxxx e reger-se-á pelas regras e condições a seguir expostas:
+•	Alliage S/A Indústrias Médico Odontológica 
+Nome Fantasia: DABI
+CPNJ: 55.979.736/0001-45; e 
+
+•	Olsen Indústria e Comércio S/A
+Nome Fantasia: Olsen S/A
+CNPJ: 83.802.215/0001-53
+
+O presente concurso reger-se-á pelas regras e condições a seguir expostas:
 
 1. Das Regras Gerais
 
@@ -16,16 +24,16 @@ O concurso cultural “Quis APCD/ABCD” será organizado pela Associação Paul
 
 2.1. O concurso será realizado nos seguintes dias e horário:
  
-25/01/2023 – 10h às 20h
-26/01/2023 – 10h às 20h
-27/01/2023 – 10h às 20h
-28/01/2023 – 10h às 19h
+a)	25/01/2023 – 10h às 20h;
+b)	26/01/2023 – 10h às 20h;
+c)	27/01/2023 – 10h às 20h; e 
+d)	28/01/2023 – 10h às 19h.
 
 2.2. O local do concurso será no Espaço dos Associados da APCD/ABCD, localizado no estande B11 – Avenida 1000 do Expo Center Norte.
 
 3. Dos Participantes
 
-3.1. O concurso é exclusivo para cirurgiões-dentistas associados da Associação Paulista de Cirurgiões-Dentistas e Associação Brasileira de Cirurgiões-Dentistas que estejam em dia com as suas obrigações financeiras junto à respectiva associação.
+3.1. O concurso é exclusivo para cirurgiões-dentistas associados da Associação Paulista de Cirurgiões-Dentistas ou da Associação Brasileira de Cirurgiões-Dentistas que estejam em dia com as suas obrigações financeiras junto à respectiva associação.
 
 3.2. Caso o(a) cirurigião(ã)-dentistas associado(a) possua débitos junto a APCD ou ABCD, o(a) mesmo(a) só poderá participar do concurso após a devida regularização das pendências financeiras. 
 
@@ -33,17 +41,16 @@ O concurso cultural “Quis APCD/ABCD” será organizado pela Associação Paul
 
 3.4. Não poderão participar do concurso diretores e colaboradores da APCD/ABCD.
 
-
 4. Da Participação do Concurso
 
 4.1. Para participar do concurso o(a) associado(a) deverá:
 
-Estar em dia com suas obrigações financeiras perante APCD ou ABCD;
-Apresentar um documento de identificação;
-Cumprir as regras estabelecidas no presente regulamento;
-Prestar as informações solicitadas no “Totem” localizado no estande indicado na regra 2.2;
-Estar ciente das regras aqui estabelecidas e dar o devido aceite; e
-Responder corretamente às 03 (três) perguntas do “Quiz” feitas durante a realização do evento.
+a)	Estar em dia com suas obrigações financeiras perante APCD ou ABCD;
+b)	Apresentar um documento de identificação;
+c)	Cumprir as regras estabelecidas no presente regulamento;
+d)	Prestar as informações solicitadas no “Totem” localizado no estande indicado na regra 2.2;
+e)	Estar ciente das regras aqui estabelecidas e dar o devido aceite; e
+f)	Responder corretamente às 03 (três) perguntas do “Quiz” feitas durante a realização do evento.
 
 4.2. Cada participante, identificado a partir do seu CPF, só poderá participar do concurso cultural uma única vez ao dia, exemplificando: uma vez no dia 25/01/2023, uma vez no dia 26/01/2023, uma vez no dia 27/01/2023 e uma vez no dia 28/01/2023.
 
@@ -59,18 +66,18 @@ Responder corretamente às 03 (três) perguntas do “Quiz” feitas durante a r
 
 5.4. Para cada pergunta respondida de forma correta, será considerada a pontuação da questão e o tempo de resposta.
 
-5.5. Para questão respondida de forma incorreta, não será considerada qualquer pontuação e será considerado o tempo de 15s.
+5.5. Para questão respondida de forma incorreta, não será considerada qualquer pontuação.
 
 5.6. Conforme regra 4.2, o(a) associado(a) poderá participar uma única vez ao dia.
 
 6. Dos Prêmios e do Critério de Seleção dos Vencedores
 
-6.1. São os prêmios para cada dia de concurso:
+6.1. São os prêmios para cada dia de concurso serão:
 
-25/01/2023 – Equipo xxxx
-26/01/2023 – Equipo xxxx
-27/01/2023 – Equipo xxxx
-28/01/2023 – Equipo xxxx
+a)	25/01/2023 – Equipo fornecido pela DABI
+b)	26/01/2023 – Equipo fornecido pela OLSEN
+c)	27/01/2023 – Equipo fornecido pela DABI
+d)	28/01/2023 – Equipo fornecido pela OLSEN
 
 6.2. Para cada dia de concurso, haverá um(a) vencedor(a). 
 
@@ -81,6 +88,8 @@ Responder corretamente às 03 (três) perguntas do “Quiz” feitas durante a r
 6.4. Serão consideradas a classificação e respostas ofertadas no dia de cada concurso, ou seja, não serão consideradas as classificações e as resposta ofertadas nos outros dias do concurso.
 
 6.5. Para cada dia de evento, o(a) vencedor(a) será declarado(a) pelo Presidente da Associação Paulista de Cirurgiões-Dentistas, sendo sua decisão soberana e não cabem revisões, apelações, impugnações ou contestações por parte dos participante.
+
+6.6. O(a) vencedor(a) de um dos dias do concurso não poderá concorrer nos demais dias do concurso, tendo em vista que o(a) participante receberá apenas um prêmio durante todo o concurso. O(a) vencedor(a) de um dos dias estará automaticamente inabilitado para concorrer nos demais dias do concurso. Caso, por uma eventualidade, o(a) associado(a) premiado participe em um outro dia diverso daquele que venceu o concurso, suas respostas serão desconsideradas.
 
 7. Da Comunicação e Entregada dos Prêmios
 
@@ -94,7 +103,7 @@ Responder corretamente às 03 (três) perguntas do “Quiz” feitas durante a r
 
 8. Da Publicidade e Divulgação
 
-8.1. Os vencedores autorizam, nos termos da LGPD, a APCD, ABCD e os patrocinadores do presente concurso a utilizar seus nomes, estado/município de residência, imagens/fotos/vídeo ou vozes para fins publicitários, divulgação e promoção, sem qualquer remuneração, até o período de 01 (um) anos após finalizado o concurso.
+8.1. Os vencedores autorizam, nos termos da LGPD, a APCD, ABCD e os patrocinadores do presente concurso a utilizar seus nomes, estado/município de residência, imagens/fotos/vídeo ou vozes para fins publicitários, divulgação e promoção, sem qualquer remuneração, até o período de 01 (um) ano depois de finalizado o concurso.
 
 9. Das Condições Gerais
 
@@ -109,17 +118,15 @@ Responder corretamente às 03 (três) perguntas do “Quiz” feitas durante a r
 10. Da Proteção e Privacidade dos Seus Dados Pessoais
 
 10.1. O regulamento deste concurso atende a todas as exigências da Lei Geral de Proteção de Dados Pessoais (LGPD) e a APCD segue todas as boas práticas para garantir sua privacidade e proteger as informações que serão armazenadas até a publicação de entrega dos prêmios, 30 dias após este fato, os dados serão anonimizados, servindo apenas para fins estatísticos, não sendo mais possível a identificação das pessoas participantes. Os dados utilizados para validar a participação são:
-Nome informado pelo associado da APCD;
-CPF do associado;
-Telefone para contato.
+
+1)	Nome informado pelo(a) associado da APCD/ABCD;
+2)	CPF do(a) associado(a);
+3)	Telefone para contato.
+
 Em nenhuma hipótese esses dados serão repassados a quaisquer outras empresas.
 
 Caso queira mais informações sobre sua privacidade e a proteção de seus dados neste concurso, entre em contato com a APCD pelo e-mail: dpo@apcdcentral.com.br.
-
-❑ Concordo plenamente com o Regulamento do Concurso Cultural
-
-❑ Não concordo com o regulamento do Concurso Cultural
-Não é possível participar deste concurso sem seu consentimento para o armazenamento temporário dos seus dados.</p>`
+</p>`
 
 lgpdTerms.innerHTML = lgpdTermsText
 
