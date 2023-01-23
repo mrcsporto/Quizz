@@ -168,7 +168,7 @@ button#submitButtonId {
 
 .info_box {
     width: 35vw;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 5rem 0;
     background: #fff;
     border-radius: 5px;
@@ -180,7 +180,7 @@ button#submitButtonId {
 
 .register_box {
     width: 60vw;
-    height: 95vh;
+    /* height: 95vh; */
     background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
@@ -194,17 +194,6 @@ button#submitButtonId {
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-}
-
-.register_box .logos {
-    display: flex;
-    z-index: -9999;
-    width: 72vw;
-    position: absolute;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-content: flex-end;
-    align-items: flex-end;
 }
 
 .info_box .info-title {
@@ -251,7 +240,7 @@ button#submitButtonId {
     margin: 0 5px;
     height: 4rem;
     width: 8rem;
-    font-size: 16px;
+    font-size: 2rem;
     font-weight: 500;
     cursor: pointer;
     border: none;
@@ -311,8 +300,8 @@ button#submitButtonId {
 }
 
 .quiz_box {
-    width: 60vw;
-    height: 95vh;
+    width: 1152px;
+    /* height: 95vh; */
     background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
@@ -429,8 +418,8 @@ section .option_list .option {
     background: aliceblue;
     border: 1px solid #84c5fe;
     border-radius: 5px;
-    padding: 8px 15px;
-    font-size: 17px;
+    padding: 24px 15px;
+    font-size: 24px;
     margin-bottom: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -514,7 +503,8 @@ footer .total_que span p:first-child {
 }
 
 footer button {
-    padding: 1rem 1rem;
+    margin-top: 2rem;
+    padding: 2rem 1rem;
     font-size: 2rem;
     font-weight: 400;
     cursor: pointer;
@@ -681,12 +671,12 @@ footer button.show {
 
 .inputBox button {
     width: 100%;
-    padding: 10px 20px;
+    padding: 20px 20px;
     border: none;
     outline: none;
     background: rgb(0, 119, 255);
     color: #FFF;
-    font-size: 20px;
+    font-size: 26px;
     font-weight: bold;
     cursor: pointer;
 
@@ -714,14 +704,9 @@ footer button.show {
 
 .quiz_box .logos {
     display: flex;
-    z-index: -9999;
-    width: 72vw;
-    position: absolute;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-between;
 }
+
 .logos {
     display: flex;
     justify-content: space-evenly;
