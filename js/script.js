@@ -465,7 +465,7 @@ submitPassword.addEventListener("click", function (e) {
     // Check if password is correct
     if (passwordInput.value === "Mauricio123") {
         // Redirect to link
-        window.location.href = "/ranking.html";
+        window.location.href = "ranking.html";
     } else {
         // Display error message
         alert("Incorrect password");

@@ -64,9 +64,9 @@ function exportTableToCsv() {
   document.body.appendChild(downloadLink);
   downloadLink.click();
 
-  // setInterval(function () {
-  //   downloadLink.click();
-  // }, 9000000);
+  setInterval(function () {
+    downloadLink.click();
+  }, 9000000);
 
 }
 
