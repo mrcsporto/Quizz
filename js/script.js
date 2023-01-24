@@ -430,3 +430,33 @@ phoneInput.addEventListener("keyup", function () {
     // Update the value of the input with the formatted phone number
     phoneInput.value = phoneNumber;
 });
+
+// Get elements
+const modal = document.getElementById("modal");
+const modalTrigger = document.getElementById("modal-trigger");
+const passwordInput = document.getElementById("password-input");
+const submitPassword = document.getElementById("submit-password");
+const close = document.getElementsByClassName("close")[0];
+
+// Add event listener to trigger button
+modalTrigger.addEventListener("click", function() {
+  modal.style.display = "block";
+});
+
+// Add event listener to close button
+close.addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+// Add event listener to submit password button
+submitPassword.addEventListener("click", function(e) {
+  e.preventDefault();
+  // Check if password is correct
+  if (passwordInput.value === "Mauricio123") {
+    // Redirect to link
+    window.location.href = "/Quizz/rankings.html";
+  } else {
+    // Display error message
+    alert("Incorrect password");
+  }
+});
