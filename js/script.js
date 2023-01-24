@@ -69,6 +69,8 @@ let counter;
 let counterLine;
 let widthValue = 0;
 let finalScore = 0;
+let answerTime = 0;
+let fractionOfSeconds = 0;
 
 const restart_quiz = result_box.querySelector(".buttons .restart");
 const quit_quiz = result_box.querySelector(".buttons .quit");
@@ -124,7 +126,6 @@ function nextButtonCountdown() {
         count--;
         if (count === 0) {
             clearInterval(intervalId);
-            console.log(count)
             next_btn.click();
             count = 3;
         }
@@ -166,13 +167,16 @@ function optionSelected(answer) {
     const allOptions = option_list.children.length; //getting all option items
 
     if (userAns == correcAns) { //if user selected option is equal to array's correct answer
-        let divWidth = document.getElementsByClassName("time_line")[0].offsetWidth;
-        userScore += 500 //upgrading score value with 1
-        finalScore = parseInt(userScore + (1152 - divWidth));
+        userScore = 500 //upgrading score value with 1
+        timeScore = (((parseInt(timeCount.textContent) - fractionOfSeconds) / 15) * 500)
+        console.log(fractionOfSeconds)
+        finalScore += timeScore + userScore
         console.log(userScore)
-        console.log(divWidth)
-        console.log(1152 - divWidth)
+        console.log(timeScore)
         console.log(finalScore)
+
+        answerTime += timeCount.textContent
+
         answer.classList.add("correct"); //adding green color to correct selected option
         // answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
         console.log("Correct Answer");
@@ -196,15 +200,22 @@ function showResult() {
     result_box.classList.add("activeResult"); //show result box
     restart_quiz.style.display = "none";
     const scoreText = result_box.querySelector(".score_text");
-    let scoreTag = '<span> Obrigado pela sua participação <p class="name">' + user.name + '</p> Você fez <p class="score">' + finalScore + ' Pontos</p></span>';
+    let scoreTag = '<span> Obrigado pela sua participação <p class="name">' + user.name + '</p> Você fez <p class="score">' + finalScore.toFixed(2) + ' Pontos</p></span>';
     scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
 }
+
+let startTime = performance.now();
 
 function startTimer(time) {
     counter = setInterval(timer, 1000);
     function timer() {
         timeCount.textContent = time; //changing the value of timeCount with time value
         time--; //decrement the time value
+        let currentTime = performance.now();
+        let elapsedTime = currentTime - startTime;
+        let seconds = elapsedTime / 1000;
+        fractionOfSeconds += seconds % 1;
+        startTime = currentTime;
         if (time < 9) { //if timer is less than 9
             let addZero = timeCount.textContent;
             timeCount.textContent = "0" + addZero; //add a 0 before time value
@@ -228,7 +239,7 @@ function startTimer(time) {
 }
 
 function startTimerLine(time) {
-    counterLine = setInterval(timer,14);
+    counterLine = setInterval(timer, 14);
     function timer() {
         time += 1; //upgrading time value with 1
         time_line.style.width = time + "px"; //increasing width of time_line with px by time value
@@ -237,12 +248,12 @@ function startTimerLine(time) {
         timeCount.classList.add("timer_sec");
         timeText.style.color = "#004085"
 
-        if (time > 815 && time < 1152) {
+        if (time > 815 && time < 1125) {
             time_line.style.background = "red";
             timeCount.classList.remove("timer_sec");
             timeCount.classList.add("timer_sec_final");
         }
-        else if (time == 1152) { //if time value is equal 1152
+        else if (time == 1125) { //if time value is equal 1125
             clearInterval(counterLine); //clear counterLine
             time_line.style.background = "red";
             timeCount.classList.remove("timer_sec");
@@ -439,24 +450,24 @@ const submitPassword = document.getElementById("submit-password");
 const close = document.getElementsByClassName("close")[0];
 
 // Add event listener to trigger button
-modalTrigger.addEventListener("click", function() {
-  modal.style.display = "block";
+modalTrigger.addEventListener("click", function () {
+    modal.style.display = "block";
 });
 
 // Add event listener to close button
-close.addEventListener("click", function() {
-  modal.style.display = "none";
+close.addEventListener("click", function () {
+    modal.style.display = "none";
 });
 
 // Add event listener to submit password button
-submitPassword.addEventListener("click", function(e) {
-  e.preventDefault();
-  // Check if password is correct
-  if (passwordInput.value === "Mauricio123") {
-    // Redirect to link
-    window.location.href = "/ranking.html";
-  } else {
-    // Display error message
-    alert("Incorrect password");
-  }
+submitPassword.addEventListener("click", function (e) {
+    e.preventDefault();
+    // Check if password is correct
+    if (passwordInput.value === "Mauricio123") {
+        // Redirect to link
+        window.location.href = "/ranking.html";
+    } else {
+        // Display error message
+        alert("Incorrect password");
+    }
 });
