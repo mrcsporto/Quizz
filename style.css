@@ -171,8 +171,9 @@ button#submitButtonId {
 }
 
 .info_box {
-    width: 35vw;
-    /* height: 100vh; */
+    width: 40vw;
+    max-width: 900px;
+    min-width: 750px;
     padding: 5rem 0;
     background: #fff;
     border-radius: 5px;
