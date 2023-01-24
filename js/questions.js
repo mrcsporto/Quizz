@@ -33,19 +33,39 @@ let questions = [
       "Nenhuma alternativa correta",
     ]
   },
-   
-
-  //   {
-  //   numb: 6,
-  //   question: "Your Question is Here",
-  //   answer: "Correct answer of the question is here",
-  //   options: [
-  //     "Option 1",
-  //     "option 2",
-  //     "option 3",
-  //     "option 4"
-  //   ]
-  // },
+    {
+    
+    question: "Assinale a alternativa que contém um benefício ofertado pelos parceiros da APCD/ABCD?",
+    answer: "Todas as alternativas contêm um benefício ofertado pelos parceiros da APCD/ABCD",
+    options: [
+      "Seguro de Responsabilidade Civil Gratuito",
+      "Pecúlio por Morte Gratuito",
+      "Desconto nos cursos da FAOA",
+      "Todas as alternativas contêm um benefício ofertado pelos parceiros da APCD/ABCD",
+    ]
+  },
+    {
+    
+    question: "Você sabia que o Dr. Pet, parceiro da APCD/ABCD, oferta 25% de desconto para os associados na aquisição de:",
+    answer: "Plano de saúde para cães e gatos ",
+    options: [
+      "Plano de saúde para cães e gatos ",
+      "Produtos de beleza",
+      "Ingressos de Cinema",
+      "Ingressos para Teatro",
+    ]
+  },
+    {
+    
+    question: "Você sabia que a revista da APCD é composta por diversos artigos científicos? Atualmente ela é exclusiva para:",
+    answer: "Todos os associados da APCD/ABCD",
+    options: [
+      "Todos os associados da APCD/ABCD",
+      "Todos os inscritos no CROSP",
+      "Qualquer pessoa",
+      "Todas as alternativas estão corretas",
+    ]
+  },
 ];
 
 
