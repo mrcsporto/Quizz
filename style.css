@@ -126,6 +126,10 @@ input#lgpd {
     transform: scale(2);
     padding-left: 1rem;
 }
+input#lgpd2 {
+    transform: scale(2);
+    padding-left: 1rem;
+}
 
 input#terms {
     transform: scale(2.5);
