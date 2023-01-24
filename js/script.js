@@ -214,7 +214,7 @@ function startTimer(time) {
         let currentTime = performance.now();
         let elapsedTime = currentTime - startTime;
         let seconds = elapsedTime / 1000;
-        fractionOfSeconds += seconds % 1;
+        fractionOfSeconds = seconds % 1;
         startTime = currentTime;
         if (time < 9) { //if timer is less than 9
             let addZero = timeCount.textContent;
