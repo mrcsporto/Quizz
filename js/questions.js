@@ -72,7 +72,7 @@ let questions = [
 let shuffledQuestion = questions
     .map(value => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value)
+    .map(({ value }) => value).slice(0,3).sort(() => Math.random() - 0.5)
    
 shuffledQuestion = shuffledQuestion.map(function(item) {
   item.options.sort(function() {

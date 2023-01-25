@@ -139,19 +139,23 @@ function showQuetions(index) {
     const que_text = document.querySelector(".que_text");
     let que_counter = parseInt(index, 10) + 1
     //creating a new span and div tag for question and option and passing the value using array index
-    let que_tag = '<span>' + que_counter + ". " + shuffledQuestion[index].question + '</span>';
-    let option_tag = '<div class="option"><span>' + shuffledQuestion[index].options[0] + '</span></div>'
-        + '<div class="option"><span>' + shuffledQuestion[index].options[1] + '</span></div>'
-        + '<div class="option"><span>' + shuffledQuestion[index].options[2] + '</span></div>'
-        + '<div class="option"><span>' + shuffledQuestion[index].options[3] + '</span></div>';
-    que_text.innerHTML = que_tag; //adding new span tag inside que_tag
-    option_list.innerHTML = option_tag; //adding new div tag inside option_tag
-
-    const option = option_list.querySelectorAll(".option");
-
-    // set onclick attribute to all available options
-    for (i = 0; i < option.length; i++) {
-        option[i].setAttribute("onclick", "optionSelected(this)");
+    if (index === 3) {
+        showResult()
+    } else {
+        let que_tag = '<span>' + que_counter + ". " + shuffledQuestion[index].question + '</span>';
+        let option_tag = '<div class="option"><span>' + shuffledQuestion[index].options[0] + '</span></div>'
+            + '<div class="option"><span>' + shuffledQuestion[index].options[1] + '</span></div>'
+            + '<div class="option"><span>' + shuffledQuestion[index].options[2] + '</span></div>'
+            + '<div class="option"><span>' + shuffledQuestion[index].options[3] + '</span></div>';
+        que_text.innerHTML = que_tag; //adding new span tag inside que_tag
+        option_list.innerHTML = option_tag; //adding new div tag inside option_tag
+    
+        const option = option_list.querySelectorAll(".option");
+    
+        // set onclick attribute to all available options
+        for (i = 0; i < option.length; i++) {
+            option[i].setAttribute("onclick", "optionSelected(this)");
+        }
     }
 }
 // creating the new div tags which for icons
