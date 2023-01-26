@@ -1,73 +1,66 @@
 // creating an array and passing the number, questions, options, and answers
 let questions = [
-    {
-   
-    question: "Qual seguro, ofertado de forma gratuita pela APCD/ABCD aos seus associados, visa indenizar o paciente em razão de um ato praticado pelo(a) cirurgião(ã)-dentista?",
-    answer: "Seguro de Responsabilidade Civil",
+  {
+    question: "A Consultiva Contabilidade oferta aos associados da APCD/ABCD valores diferenciados na contratação de:",
+    answer: "Serviços contábeis e folha de pagamento",
     options: [
-      "Seguro de Perda de Renda",
-      "Seguro de Responsabilidade Civil",
-      "Seguro de Consultório",
-      "Seguro de Vida",
+      "Serviços contábeis e folha de pagamento",
+      "Assessoria Esportiva",
+      "Assessoria Artística",
+      "Nenhuma Alternativa Correta",
     ]
   },
-    {
-   
-    question: "Qual benefício gratuito o(a) herdeiro(a) do(a) associado(a) da APCD/ABCD possui em caso de falecimento do(a) associado(a)?",
-    answer: "Pecúlio por Morte",
+  {
+    question: "Para o(a) associado(a) ter acesso à revista da APCD, é preciso:",
+    answer: "Acessar a área do associado da APCD",
     options: [
-      "Pensão por Morte",
-      "Pecúlio por Morte",
-      "Auxílio-Doença",
-      "Auxílio-Acidente",
-    ]
-  },
-    {
-    
-    question: "A APCD criou um FAQ com conteúdos de orientação aos profissionais da odontologia. Ele é exclusivo para os associados da APCD/ABCD. Para ter acesso é preciso:",
-    answer: "Acessar o portal do associado da APCD",
-    options: [
-      "Acessar o portal do associado da APCD",
+      "Acessar a área do associado da APCD",
       "Acessar o site do CFO",
-      "Acessar o site da FAOA",
+      "Acessar as redes sociais",
       "Nenhuma alternativa correta",
     ]
   },
-    {
-    
-    question: "Assinale a alternativa que contém um benefício ofertado pelos parceiros da APCD/ABCD?",
-    answer: "Todas as alternativas contêm um benefício ofertado pelos parceiros da APCD/ABCD",
+  {
+    question: "A APCD/ABCD possui parceria com a Giuliana Flores e Cestas Michelli, onde os associados possuem descontos na aquisição de:",
+    answer: "Flores e Cestas Especiais",
     options: [
-      "Seguro de Responsabilidade Civil Gratuito",
-      "Pecúlio por Morte Gratuito",
-      "Desconto nos cursos da FAOA",
-      "Todas as alternativas contêm um benefício ofertado pelos parceiros da APCD/ABCD",
+      "Artigos Automotivos",
+      "Artigos Esportivos",
+      "Flores e Cestas Especiais",
+      "Nenhuma alternativa correta",
     ]
   },
-    {
-    
-    question: "Você sabia que o Dr. Pet, parceiro da APCD/ABCD, oferta 25% de desconto para os associados na aquisição de:",
-    answer: "Plano de saúde para cães e gatos ",
+  {
+    question: "Você sabia que os associados APCD/ABCD possuem descontos em lojas online de cosméticos, beleza e  perfumaria? Assinale a alternativa que contém esses parceiros:",
+    answer: "L'Occitane, O Boticário, Sephora e Jequiti",
     options: [
-      "Plano de saúde para cães e gatos ",
-      "Produtos de beleza",
-      "Ingressos de Cinema",
-      "Ingressos para Teatro",
+      "L'Occitane, O Boticário, Sephora e Jequiti",
+      "Shop Club Eletrolux, Trem de Histórias e Tricae",
+      "Petz, Mobly e Under Armour",
+      "Centauro e Giuliana Flores",
     ]
   },
-    {
-    
-    question: "Você sabia que a revista da APCD é composta por diversos artigos científicos? Atualmente ela é exclusiva para:",
-    answer: "Todos os associados da APCD/ABCD",
+  {
+    question: "Você sabia que a APCD conta com Classificados? Nele os associados poderão anunciar:",
+    answer: "Venda de equipamentos odontológicos e vagas de emprego",
     options: [
-      "Todos os associados da APCD/ABCD",
-      "Todos os inscritos no CROSP",
-      "Qualquer pessoa",
-      "Todas as alternativas estão corretas",
+      "Venda de equipamentos odontológicos e vagas de emprego",
+      "Venda de artigos esportivos",
+      "Vagas de garagem em condomínio",
+      "Nenhuma alternativa correta",
+    ]
+  },
+  {
+    question: "O(a) associado(a) que completa 65 anos e contribuiu na categoria sócio efetivo durante 360 meses, está isento do pagamento da taxa associativa. Qual a categoria deste(a) associado(a)?",
+    answer: "Remido",
+    options: [
+      "Remido",
+      "Efetivo",
+      "Isento",
+      "Aposentado",
     ]
   },
 ];
-
 
 let shuffledQuestion = questions
     .map(value => ({ value, sort: Math.random() }))
